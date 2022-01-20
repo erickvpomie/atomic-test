@@ -1,0 +1,80 @@
+<div class="main-container">
+  <img class="background" src="./assets/img/01.png" alt="space">
+  <div class="presentation-layout">
+    <div class="cosmonaut-container">
+      <img class="main-logo" src="./assets/img/02.webp" alt="logo">
+      <img class="cosmonaut animated animated-slows infinite pulse" src="./assets/img/03.png" alt="cosmonaut">
+    </div>
+    <div class="promotion-container">
+      <div class="headline-text fw-bold fs-56">
+        <span>Desarrolla todo</span>
+        <span class="text-marked fs-64">tu POTENCIAL</span>
+        <span class="fs-48">dentro del equipo</span>
+        <div class="text-marked fs-66">ATOMIC<span class="text-unmarked">LABS</span></div>
+      </div>
+      <generic-button [text]="'¡Quiero ser parte!'" [textSize]="'md'"></generic-button>
+    </div>
+  </div>
+  <div class="about-layout">
+    <div class="about-text fw-bold fs-60">
+      <span class="text-unmarked">SOMOS EL BRAZO DERECHO</span>
+      <span class="text-marked">DE LA TECNOLOGÍA</span>
+    </div>
+    <div class="cards-container">
+      <generic-card *ngFor="let card of cardsData"
+                    [imgName]="card?.imgName"
+                    [title]="card?.title"
+                    [size]="card?.size"
+                    [content]="card?.details"
+                    [color]="card?.color"
+      ></generic-card>
+    </div>
+  </div>
+  <div class="work-layout">
+    <div class="about-text fw-bold fs-60">
+      <span class="text-unmarked">¡TE ENCANTARÁ</span>
+      <span class="text-marked">TRABAJAR CON NOSOTROS!</span>
+    </div>
+    <img class="work-banner" src="./assets/img/07.png" alt="">
+    <div class="time-line fw-light fs-20 d-flex align-items-center justify-content-space-between">
+      <div class="text-item ">Contratación remota</div>
+      <img class="arrow-item" src="./assets/img/08.svg" alt="arrow">
+      <div class="text-item ">Entrevista con el área de RH</div>
+      <img class="arrow-item" src="./assets/img/08.svg" alt="arrow">
+      <div class="text-item ">Prueba práctica</div>
+      <img class="arrow-item" src="./assets/img/08.svg" alt="arrow">
+      <div class="text-item ">Entrevista técnica</div>
+    </div>
+  </div>
+  <div class="question-layout">
+    <div class="question-title fw-bold fs-60">
+      ¿POR QUÉ&nbsp;<span class="text-marked">ATOMIC?</span>
+    </div>
+    <div class="question-gateway d-flex align-items-center justify-content-space-between">
+      <div class="gateway-item" *ngFor="let item of gatewayData">
+        <img class="gateway-img" src="./assets/img/{{ item.imgName }}" alt="{{ item.imgName }}">
+        <div class="gateway-description fs-20 d-flex align-items-center" *ngFor="let info of item.details">
+          <img class="check-icon" src="./assets/img/12.png" alt="dot">
+          <span>{{ info }}</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="table-layout">
+    <div class="table-item">
+      <div class="header">
+        <div class="first-column fw-bold fs-25">CARACTERÍSTICAS</div>
+        <div class="second-column fw-bold fs-25">OTROS</div>
+        <div class="third-column fw-bold fs-35">ATOMIC</div>
+      </div>
+      <div class="row" *ngFor="let featured of featuresData">
+        <div class="first-column">{{ featured.title }}</div>
+        <div class="second-column"><img src="./assets/img/12.png" alt="" *ngIf="featured.others"></div>
+        <div class="third-column"><img src="./assets/img/12.png" alt="" *ngIf="featured.atomic"></div>
+      </div>
+    </div>
+    <generic-button [text]="'¡Quiero ser parte!'" [textSize]="'md'"></generic-button>
+  </div>
+</div>
+<generic-footer></generic-footer>

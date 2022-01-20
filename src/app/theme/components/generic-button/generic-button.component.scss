@@ -1,0 +1,18 @@
+@import "../../../theme/styles/styles";
+
+.generic-btn {
+  width: 300px;
+  height: 45px;
+  border-radius: 20px;
+  background: $white-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $blue-text;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.generic-btn:active {
+  transform: scale(0.95);
+}

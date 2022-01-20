@@ -1,0 +1,24 @@
+<div class="generic-card" [ngClass]="{
+   'white-bg'     : color == 'white',
+   'orange-bg'    : color == 'orange',
+   'small-size'   : size == 'sm',
+   'big-size'     : size == 'xl'
+   }">
+  <img src="./assets/img/{{imgName}}" alt="img">
+  <div class="separator d-flex justify-content-space-between align-items-center">
+    <span class="long" [ngClass]="{ 'orange-bg' : color == 'white', 'white-bg' : color == 'orange' }"></span>
+    <span class="short" [ngClass]="{ 'orange-bg' : color == 'white', 'white-bg' : color == 'orange' }"></span>
+    <span class="long" [ngClass]="{ 'orange-bg' : color == 'white', 'white-bg' : color == 'orange' }"></span>
+  </div>
+
+  <div class="generic-title fs-35 fw-bold"
+    [ngClass]="{ 'orange-text' : color == 'white' }"
+  > {{ title.toUpperCase() }} </div>
+
+  <div class="order-list fs-20">
+    <li  *ngFor="let item of content" [innerHTML]="item"
+      [ngClass]="{ 'fs-24' : size == 'xl' }"
+    > </li>
+  </div>
+
+</div>

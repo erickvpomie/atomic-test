@@ -1,0 +1,27 @@
+$light   : 300;
+$regular : 400;
+$medium  : 500;
+$semi    : 600;
+$bold    : 700;
+
+.fw-light {
+  font-weight: $light;
+}
+
+.fw-medium {
+  font-weight: $medium;
+}
+
+.fw-semi {
+  font-weight: $semi;
+}
+
+.fw-bold {
+  font-weight: $bold;
+}
+
+@for $index from 10 through 100 {
+  .fs-#{$index} {
+    font-size: 0px + $index;
+  }
+}
