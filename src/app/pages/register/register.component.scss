@@ -29,6 +29,12 @@
     flex-direction: column;
     align-items: flex-start;
 
+    .main-logo{
+      width: 150px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+
     .process-layout {
       width: 100%;
       height: 100%;
@@ -177,14 +183,6 @@
     }
   }
 
-}
-
-.text-marked {
-  color: $primary-color;
-}
-
-.text-unmarked {
-  color: $white-color;
 }
 
 .sender-splash{

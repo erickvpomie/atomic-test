@@ -1,0 +1,79 @@
+@import "../../theme/styles/styles";
+
+.main-container {
+  width: 100%;
+  height: calc(100vh - 123px);
+  position: relative;
+  background: $secondary-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  user-select: none;
+
+  .background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 0;
+  }
+
+  .success-layout {
+    position: relative;
+    width: 1154px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .main-logo {
+      width: 150px;
+      object-fit: cover;
+      padding-bottom: 50px;
+      cursor: pointer;
+    }
+
+    .details-layout{
+      width: 100%;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .description-container{
+        width: 577px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: $white-color;
+        .main-text{
+          line-height: 50px;
+          padding-bottom: 20px;
+        }
+        .subtitles{
+          padding-bottom: 20px;
+        }
+      }
+
+      .cosmonaut-container{
+        width: 500px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        .cosmonaut{
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+
+    }
+
+
+  }
+
+
+}

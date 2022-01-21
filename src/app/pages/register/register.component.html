@@ -1,25 +1,25 @@
-<div class="main-container">
+<div class="main-container animated">
   <img class="background" src="./assets/img/01.png" alt="space">
   <div class="register-layout">
-    <img class="main-logo" src="./assets/img/02.webp" alt="logo">
+    <img class="main-logo" src="./assets/img/02.webp" alt="logo" (click)="toHome()">
     <div class="process-layout">
       <div class="steps-container">
 
         <div class="time-line-container d-flex direction-column">
           <div class="numbers-container d-flex justify-content-space-between align-items-center">
-            <img class="step-number" src="./assets/img/16_alt.png" alt="logo" *ngIf="position == 0">
-            <img class="step-number" src="./assets/img/20.png" alt="logo" *ngIf="position !== 0">
+            <img class="step-number animated fadeIn " src="./assets/img/16_alt.png" alt="logo" *ngIf="position == 0">
+            <img class="step-number animated fadeIn" src="./assets/img/20.png" alt="logo" *ngIf="position !== 0">
 
-            <img class="step-number" src="./assets/img/17_alt.png" alt="logo" *ngIf="position == 0 || position == 1"> <!--Antes o la misma-->
-            <img class="step-number" src="./assets/img/20.png" alt="logo" *ngIf="position == 2 || position == 3 || position == 4"> <!-- después-->
-
-
-            <img class="step-number" src="./assets/img/18_alt.png" alt="logo" *ngIf="position == 0 || position == 1 || position == 2">
-            <img class="step-number" src="./assets/img/20.png" alt="logo" *ngIf="position == 3 || position == 4">
+            <img class="step-number animated fadeIn delay-1" src="./assets/img/17_alt.png" alt="logo" *ngIf="position == 0 || position == 1"> <!--Antes o la misma-->
+            <img class="step-number animated fadeIn" src="./assets/img/20.png" alt="logo" *ngIf="position == 2 || position == 3 || position == 4"> <!-- después-->
 
 
-            <img class="step-number" src="./assets/img/19_alt.png" alt="logo" *ngIf="position == 0 || position == 1 || position == 2 || position == 3">
-            <img class="step-number" src="./assets/img/20.png" alt="logo" *ngIf="position == 4">
+            <img class="step-number animated fadeIn delay-2" src="./assets/img/18_alt.png" alt="logo" *ngIf="position == 0 || position == 1 || position == 2">
+            <img class="step-number animated fadeIn" src="./assets/img/20.png" alt="logo" *ngIf="position == 3 || position == 4">
+
+
+            <img class="step-number animated fadeIn delay-3" src="./assets/img/19_alt.png" alt="logo" *ngIf="position == 0 || position == 1 || position == 2 || position == 3">
+            <img class="step-number animated fadeIn" src="./assets/img/20.png" alt="logo" *ngIf="position == 4">
           </div>
           <div class="progress-bar">
             <div class="progress-color" [ngClass]="{ 'pg-25' : position == 1,'pg-50': position == 2, 'pg-75' : position == 3, 'pg-100' : position == 4  }" ></div>
@@ -27,21 +27,21 @@
         </div>
 <!--        <div class="arrow-back d-flex align-items-center" *ngIf="position !== 0" (click)="previousStep()"> < Regresar </div>-->
         <div class="step-title d-flex fs-40 fw-bold align-items-center">
-          <img class="step-number" src="./assets/img/16.png" alt="logo" *ngIf="position == 0">
-          <div class="main-title" *ngIf="position == 0">TE QUEREMOS <span class="text-marked">CONOCER</span></div>
+          <img class="step-number animated fadeIn" src="./assets/img/16.png" alt="logo" *ngIf="position == 0">
+          <div class="main-title animated fadeIn" *ngIf="position == 0">TE QUEREMOS <span class="text-marked">CONOCER</span></div>
 
-          <img class="step-number" src="./assets/img/17.png" alt="logo" *ngIf="position == 1 && !phoneCodeScreen">
-          <img class="step-number" src="./assets/img/18.png" alt="logo" *ngIf="phoneCodeScreen">
+          <img class="step-number animated fadeIn" src="./assets/img/17.png" alt="logo" *ngIf="position == 1 && !phoneCodeScreen">
+          <img class="step-number animated fadeIn" src="./assets/img/18.png" alt="logo" *ngIf="phoneCodeScreen">
           <div class="main-title" *ngIf="position == 1">{{ headerPhoneText }} <span class="text-marked" *ngIf="!editIcon">CELULAR</span></div>
 
-          <img class="step-number" src="./assets/img/19.png" alt="logo" *ngIf="position == 3">
+          <img class="step-number animated fadeIn" src="./assets/img/19.png" alt="logo" *ngIf="position == 3">
           <div class="main-title" *ngIf="position == 3">TÉRMINOS Y <span class="text-marked">CONDICIONES</span></div>
 
         </div>
         <div class="form-container" *ngIf="position == 0">
-          <span class="fw-medium fs-20">Queremos saber que eres tu, por favor ingresa los siguientes datos:</span>
+          <span class="fw-medium fs-20 animated fadeIn delay-1">Queremos saber que eres tu, por favor ingresa los siguientes datos:</span>
           <generic-input
-            class="padding-top-20"
+            class="padding-top-20 animated fadeIn"
             [label]="'Nombre(s)'"
             [lockIcon]="true"
             [hasError]="hasErrorsName"
@@ -51,7 +51,7 @@
           ></generic-input>
 
           <generic-input
-            class="padding-top-20"
+            class="padding-top-20 animated fadeIn"
             [label]="'Apellidos'"
             [lockIcon]="true"
             [hasError]="hasErrorsLastName"

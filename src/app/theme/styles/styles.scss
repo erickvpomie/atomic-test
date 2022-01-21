@@ -19,3 +19,11 @@
   background: $primary-color !important;
   border-radius: 10px !important;
 }
+
+.text-marked {
+  color: $primary-color;
+}
+
+.text-unmarked {
+  color: $white-color;
+}

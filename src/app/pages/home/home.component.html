@@ -1,22 +1,32 @@
 <div class="main-container">
   <img class="background" src="./assets/img/01.png" alt="space">
   <div class="presentation-layout">
+
+    <div class="scroller-box">
+      <div class="scroller-container">
+        <a href="home#about" class="circle animated animated-slows bounce infinite">
+          <img class="arrow" src="./assets/img/27.svg" alt="" >
+        </a>
+        <span class="fw-medium fs-14 padding-top-10 padding-bottom-10">Quiero saber más</span>
+      </div>
+    </div>
+
     <div class="cosmonaut-container">
       <img class="main-logo" src="./assets/img/02.webp" alt="logo">
       <img class="cosmonaut animated animated-slows infinite pulse" src="./assets/img/03.png" alt="cosmonaut">
     </div>
     <div class="promotion-container">
-      <div class="headline-text fw-bold fs-56">
+      <div class="headline-text fw-bold fs-56 animated fadeIn">
         <span>Desarrolla todo</span>
         <span class="text-marked fs-64">tu POTENCIAL</span>
         <span class="fs-48">dentro del equipo</span>
         <div class="text-marked fs-66">ATOMIC<span class="text-unmarked">LABS</span></div>
       </div>
-      <generic-button [text]="'¡Quiero ser parte!'" [textSize]="'md'" [weight]="'semi'" [btnSize]="'bg'" (click)="toRegisterPage()"></generic-button>
+      <generic-button class="animated fadeIn delay-1" [text]="'¡Quiero ser parte!'" [textSize]="'md'" [weight]="'semi'" [btnSize]="'bg'" (click)="toRegisterPage()"></generic-button>
     </div>
   </div>
   <div class="about-layout">
-    <div class="about-text fw-bold fs-60">
+    <div class="about-text fw-bold fs-60" id="about">
       <span class="text-unmarked">SOMOS EL BRAZO DERECHO</span>
       <span class="text-marked">DE LA TECNOLOGÍA</span>
     </div>

@@ -9,6 +9,8 @@ import {Router, Routes} from "@angular/router";
 })
 export class HomeComponent implements OnInit {
 
+  public showScroller : boolean = true;
+
   public cardsData    : Array<any> = [
     {
       title: 'Explora',

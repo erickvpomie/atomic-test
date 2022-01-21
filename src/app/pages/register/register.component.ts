@@ -8,7 +8,7 @@ import {Router} from "@angular/router";
 })
 export class RegisterComponent implements OnInit {
 
-  public position           : number  = 3;
+  public position           : number  = 0;
   public showBack           : boolean = false;
   public hasErrorsName      : boolean = false;
   public hasErrorsLastName  : boolean = false;
@@ -93,6 +93,10 @@ export class RegisterComponent implements OnInit {
 
   endRegistration(){
     this.router.navigate(['success']).then();
+  }
+
+  toHome(){
+    this.router.navigate(['home']).then();
   }
 
   @HostListener('document:keydown.escape', []) onKeydownHandler() {

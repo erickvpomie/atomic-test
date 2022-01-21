@@ -20,10 +20,43 @@
   }
 
   .presentation-layout {
+    position: relative;
     width: 1154px;
     height: 100vh;
     display: flex;
     z-index: 1;
+
+    .scroller-box{
+      width: 100%;
+      height: 100px;
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $white-color;
+      .scroller-container{
+        width: 154px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .circle{
+          width: 58px;
+          height: 58px;
+          background: $white-color;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          cursor: pointer;
+          .arrow{
+            width: 20px;
+            object-fit: cover;
+          }
+        }
+      }
+    }
 
     .cosmonaut-container {
       width: 577px;
@@ -39,7 +72,7 @@
     }
 
     .promotion-container {
-      width: 5577px;
+      width: 577px;
       height: 100%;
       display: flex;
       flex-direction: column;
