@@ -1,0 +1,243 @@
+@import "../../theme/styles/styles";
+
+.main-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: $secondary-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  user-select: none;
+
+  .background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 0;
+  }
+
+  .register-layout {
+    position: relative;
+    width: 1154px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .process-layout {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .cosmonaut {
+        width: 395px;
+        object-fit: contain;
+      }
+
+      .steps-container {
+        width: calc(100% - 395px);
+        position: relative;
+        height: 590px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .time-line-container {
+          width: 100%;
+          height: 68px;
+          position: relative;
+
+          .numbers-container{
+            width: 100%;
+            padding: 0 90px;
+            .step-number{
+              width: 35px;
+              object-fit: cover;
+            }
+          }
+
+          .progress-bar{
+            width: 100%;
+            height: 10px;
+            border-radius: 5px;
+            margin: 10px 10px;
+            background: $white-color;
+            position: relative;
+
+            .progress-color{
+              width: 14%;
+              position: absolute;
+              background: $primary-color;
+              height: 10px;
+              bottom: 0;
+              border-radius: 5px;
+              transition: width 0.4s ease;
+
+              &.pg-25{
+                width: 25%;
+              }
+
+              &.pg-50{
+                width: 50%;
+              }
+
+              &.pg-75{
+                width: 75%;
+              }
+
+              &.pg-100{
+                width: 100%;
+              }
+            }
+
+          }
+
+        }
+
+        .arrow-back {
+          padding: 5px 0 10px 0;
+          color: $white-color;
+          cursor: pointer;
+        }
+
+        .step-title {
+          padding-top: 10px;
+          color: $white-color;
+
+          .step-number {
+            padding-right: 20px;
+            height: 54px;
+            object-fit: cover;
+          }
+        }
+
+        .form-container{
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          padding-top: 20px;
+          color: $white-color;
+          position: relative;
+
+          .btn-save{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+
+            &.disabled{
+              pointer-events: none;
+            }
+
+          }
+
+          .conditions{
+            text-decoration: underline;
+            cursor: pointer;
+          }
+
+          .checkbox-container{
+            position: relative;
+            width: 25px;
+            height: 25px;
+            border-radius: 5px;
+            background: $secondary-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            transition: all 0.4s ease;
+            cursor: pointer;
+
+            .check-item{
+              width: 20px;
+            }
+
+            &.checked{
+              background: $primary-color;
+            }
+          }
+
+          .checkbox-container:active{
+            transform: scale(0.8);
+          }
+
+        }
+
+      }
+
+    }
+  }
+
+}
+
+.text-marked {
+  color: $primary-color;
+}
+
+.text-unmarked {
+  color: $white-color;
+}
+
+.sender-splash{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  background: $secondary-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $white-color;
+  .item-check{
+    width: 100px;
+    object-fit: cover;
+    padding-bottom: 40px;
+  }
+}
+
+.modal-splash{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  background: rgba(black, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .modal-container{
+    width: 570px;
+    height: 546px;
+    background: $white-color;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    overflow: auto;
+    .alert-icon{
+      width: 50px;
+      object-fit: cover;
+    }
+    .conditions-text{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

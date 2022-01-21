@@ -12,7 +12,7 @@
         <span class="fs-48">dentro del equipo</span>
         <div class="text-marked fs-66">ATOMIC<span class="text-unmarked">LABS</span></div>
       </div>
-      <generic-button [text]="'¡Quiero ser parte!'" [textSize]="'md'"></generic-button>
+      <generic-button [text]="'¡Quiero ser parte!'" [textSize]="'md'" [weight]="'semi'" [btnSize]="'bg'" (click)="toRegisterPage()"></generic-button>
     </div>
   </div>
   <div class="about-layout">
@@ -74,7 +74,7 @@
         <div class="third-column"><img src="./assets/img/12.png" alt="" *ngIf="featured.atomic"></div>
       </div>
     </div>
-    <generic-button [text]="'¡Quiero ser parte!'" [textSize]="'md'"></generic-button>
+    <generic-button [text]="'¡Quiero ser parte!'" [textSize]="'md'" [weight]="'semi'" [btnSize]="'bg'" (click)="toRegisterPage()"></generic-button>
   </div>
 </div>
 <generic-footer></generic-footer>

@@ -1,0 +1,15 @@
+<div class="input-component">
+  <label *ngIf="!!label" [for]="for"> {{ label }} </label>
+  <div class="input-container" [ngClass]="hasError ? 'error' : '' ">
+    <input
+      class="input-item"
+      placeholder="{{ placeholder }}"
+      [(ngModel)]="inputValue"
+      (ngModelChange)="inputValueChange.emit(inputValue)"
+      (change)="handleChange($event)"
+      [type]="type"
+    >
+    <img class="lock-icon" src="./assets/img/21.png" alt="lock" *ngIf="lockIcon">
+  </div>
+  <div class="error-text" *ngIf="hasError">{{ errorText }}</div>
+</div>

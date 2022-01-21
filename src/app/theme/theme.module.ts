@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import {GenericButtonComponent} from "./components/generic-button/generic-button.component";
 import {GenericCardComponent} from "./components/generic-card/generic-card.component";
 import {GenericFooterComponent} from "./components/generic-footer/generic-footer.component";
+import {GenericInputComponent} from "./components/generic-input/generic-input.component";
+import {FormsModule} from "@angular/forms";
 
 
 
@@ -10,15 +12,18 @@ import {GenericFooterComponent} from "./components/generic-footer/generic-footer
   declarations: [
     GenericButtonComponent,
     GenericCardComponent,
-    GenericFooterComponent
+    GenericFooterComponent,
+    GenericInputComponent
   ],
   exports: [
     GenericButtonComponent,
     GenericCardComponent,
-    GenericFooterComponent
+    GenericFooterComponent,
+    GenericInputComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ]
 })
 export class ThemeModule { }

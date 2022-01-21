@@ -1,4 +1,5 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {Router, Routes} from "@angular/router";
 
 @Component({
   selector: 'app-home',
@@ -42,7 +43,7 @@ export class HomeComponent implements OnInit {
     },
     {
       imgName: '11.png',
-      details: ['Realizamos actividades para tu bienestar', '¡Tenemos un parque frente a la oficina']
+      details: ['Realizamos actividades para tu bienestar', '¡Tenemos un parque frente a la oficina!']
     }
   ];
   public featuresData : Array<any> = [
@@ -78,11 +79,17 @@ export class HomeComponent implements OnInit {
     }
   ]
 
-  constructor() {
+  constructor(
+    private router : Router
+  ) {
 
   }
 
   ngOnInit(): void {
+  }
+
+  toRegisterPage(){
+    this.router.navigate(['register']).then();
   }
 
 }

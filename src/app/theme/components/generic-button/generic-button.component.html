@@ -1,4 +1,17 @@
 <div
   class="generic-btn fw-semi"
-  [ngClass]="{ 'fs-14': textSize == 'sm', 'fs-19' : textSize == 'md', 'fs-24' : textSize == 'gd' }"
+  [ngClass]="{
+    'fs-14'       : textSize == 'sm',
+    'fs-19'       : textSize == 'md',
+    'fs-24'       : textSize == 'gd',
+    'bg-orange'   : background == 'orange',
+    'color-white' : background == 'orange',
+    'btn-md'      : btnSize == 'md',
+    'btn-lg'      : btnSize == 'bg',
+    'fw-light'    : weight == 'lg',
+    'fw-medium'   : weight == 'md',
+    'fw-semi'     : weight == 'semi',
+    'fw-bold'     : weight == 'bold',
+    'disabled'    : disabled == true
+    }"
 >{{ text }}</div>

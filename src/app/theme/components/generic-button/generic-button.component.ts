@@ -7,8 +7,12 @@ import {Component, Input, OnInit, Output} from '@angular/core';
 })
 export class GenericButtonComponent implements OnInit {
 
-  @Input()  text    : string = '';
-  @Input() textSize : 'sm' | 'gd' | 'md' = 'sm';
+  @Input() text       : string = '';
+  @Input() textSize   : 'sm' | 'gd' | 'md' = 'sm';
+  @Input() btnSize    : 'sm' | 'md' | 'bg' = 'md';
+  @Input() background : 'white' | 'orange' = 'white';
+  @Input() weight     : 'lg' | 'md' | 'semi' | 'bold' = 'md'
+  @Input() disabled   : boolean = false;
 
   constructor() { }
 

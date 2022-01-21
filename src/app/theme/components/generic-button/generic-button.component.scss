@@ -3,7 +3,7 @@
 .generic-btn {
   width: 300px;
   height: 45px;
-  border-radius: 20px;
+  border-radius: 25px;
   background: $white-color;
   display: flex;
   align-items: center;
@@ -11,6 +11,31 @@
   color: $blue-text;
   cursor: pointer;
   transition: transform 0.4s ease;
+
+  &.bg-orange{
+    background: $primary-color;
+  }
+
+  &.color-white{
+    color: $white-color;
+  }
+
+  &.btn-md{
+    width: 192px;
+    height: 47px;
+  }
+
+  &.btn-lg{
+    width: 220px;
+    height: 50px;
+  }
+
+  &.disabled{
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+
 }
 
 .generic-btn:active {
