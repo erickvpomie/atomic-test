@@ -7,9 +7,9 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class GenericCardComponent implements OnInit {
 
-  @Input() title    : string              = '';
+  @Input() title    : string              = ' ';
   @Input() content  : Array<string>       = [];
-  @Input() imgName  : string              = '';
+  @Input() imgName  : string              = ' ';
   @Input() size     : 'sm' | 'xl'         = 'sm';
   @Input() color    : 'white' | 'orange'  = 'white';
 

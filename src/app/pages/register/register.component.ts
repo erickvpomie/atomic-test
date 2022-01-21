@@ -1,5 +1,6 @@
-import {Component, HostListener, OnInit, ViewEncapsulation} from '@angular/core';
-import {Router} from "@angular/router";
+import { Component, HostListener, OnInit } from '@angular/core';
+import { Router } from "@angular/router";
+import { userData } from "../../shared/models/user";
 
 @Component({
   selector: 'app-register',
@@ -24,6 +25,7 @@ export class RegisterComponent implements OnInit {
   public senderSplashText   : string = 'Te hemos enviado el código al número que nos proporcionaste';
   public conditionsAccepted : boolean = false;
   public showConditions     : boolean = false;
+  public step2done          : boolean = false;
 
   public userData           : userData = { name : '', lastName : '',  cellphone : '',  verificationCode : '' }
 
@@ -62,6 +64,7 @@ export class RegisterComponent implements OnInit {
   fullPhoneValidator(){
     this.disabled = true;
     this.senderSplash = true;
+    this.step2done = true;
     this.sendSMSText = 'Te enviamos un SMS al número:';
     this.sendSMSTextSub = this.userData.cellphone;
     this.headerPhoneText = 'CÓDIGO DE VERIFICACIÓN';
@@ -103,12 +106,4 @@ export class RegisterComponent implements OnInit {
     this.showConditions = false;
   }
 
-}
-
-
-interface userData {
-  name     : string;
-  lastName : string;
-  cellphone: string;
-  verificationCode : string;
 }

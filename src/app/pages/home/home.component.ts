@@ -1,5 +1,6 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {Router, Routes} from "@angular/router";
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Router } from "@angular/router";
+import { featuresData, gatewayData } from "../../shared/models/user";
 
 @Component({
   selector: 'app-home',
@@ -34,7 +35,7 @@ export class HomeComponent implements OnInit {
       size: 'sm'
     }
   ];
-  public gatewayData  : Array<any> = [
+  public gatewayData  : Array<gatewayData> = [
     {
       imgName: '09.png',
       details: ['Usamos las tecnologías más modernas', 'Innovamos y creamos proyectos retadores']
@@ -48,7 +49,7 @@ export class HomeComponent implements OnInit {
       details: ['Realizamos actividades para tu bienestar', '¡Tenemos un parque frente a la oficina!']
     }
   ];
-  public featuresData : Array<any> = [
+  public featuresData : Array<featuresData> = [
     {
       title: 'Equipo inclusivo, honesto y auténtico',
       others: true,

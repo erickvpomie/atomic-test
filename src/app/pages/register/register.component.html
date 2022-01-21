@@ -10,19 +10,17 @@
             <img class="step-number animated fadeIn " src="./assets/img/16_alt.png" alt="logo" *ngIf="position == 0">
             <img class="step-number animated fadeIn" src="./assets/img/20.png" alt="logo" *ngIf="position !== 0">
 
-            <img class="step-number animated fadeIn delay-1" src="./assets/img/17_alt.png" alt="logo" *ngIf="position == 0 || position == 1"> <!--Antes o la misma-->
-            <img class="step-number animated fadeIn" src="./assets/img/20.png" alt="logo" *ngIf="position == 2 || position == 3 || position == 4"> <!-- después-->
+            <img class="step-number animated fadeIn" src="./assets/img/17_alt.png" alt="logo" *ngIf="position == 0 && !step2done || position == 1 && !step2done"> <!--Antes o la misma-->
+            <img class="step-number animated fadeIn" src="./assets/img/20.png" alt="logo" *ngIf="step2done"> <!-- después-->
 
-
-            <img class="step-number animated fadeIn delay-2" src="./assets/img/18_alt.png" alt="logo" *ngIf="position == 0 || position == 1 || position == 2">
+            <img class="step-number animated fadeIn" src="./assets/img/18_alt.png" alt="logo" *ngIf="position == 0 || position == 1">
             <img class="step-number animated fadeIn" src="./assets/img/20.png" alt="logo" *ngIf="position == 3 || position == 4">
 
-
-            <img class="step-number animated fadeIn delay-3" src="./assets/img/19_alt.png" alt="logo" *ngIf="position == 0 || position == 1 || position == 2 || position == 3">
+            <img class="step-number animated fadeIn" src="./assets/img/19_alt.png" alt="logo" *ngIf="position == 0 || position == 1 || position == 2 || position == 3">
             <img class="step-number animated fadeIn" src="./assets/img/20.png" alt="logo" *ngIf="position == 4">
           </div>
           <div class="progress-bar">
-            <div class="progress-color" [ngClass]="{ 'pg-25' : position == 1,'pg-50': position == 2, 'pg-75' : position == 3, 'pg-100' : position == 4  }" ></div>
+            <div class="progress-color" [ngClass]="{ 'pg-25' : position == 1,'pg-50': step2done, 'pg-75' : position == 3, 'pg-100' : position == 4  }" ></div>
           </div>
         </div>
 <!--        <div class="arrow-back d-flex align-items-center" *ngIf="position !== 0" (click)="previousStep()"> < Regresar </div>-->
