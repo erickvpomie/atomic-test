@@ -16,12 +16,54 @@
     align-items: center;
     justify-content: space-between;
     .social-container{
-
       width: 365px;
       justify-content: space-between;
       .privacy{
         text-decoration: underline;
         cursor: pointer;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .generic-footer{
+    .footer-container{
+      width: 900px;
+      .social-container{
+        width: 344px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px){
+  .generic-footer{
+    .footer-container{
+      width: 600px;
+      .social-container{
+        width: 300px;
+        .social-icon{
+          width: 30px;
+          margin: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px){
+  .generic-footer{
+    .footer-container{
+      width: 400px;
+      .fs-20{
+        font-size: 15px;
+      }
+      .social-container{
+        width: 50%;
+        .privacy{
+          margin-right: 10px;
+        }
       }
     }
   }
