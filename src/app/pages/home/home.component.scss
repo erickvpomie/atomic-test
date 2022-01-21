@@ -1,4 +1,4 @@
-@import "../../theme/styles/styles";
+ @import "../../theme/styles/styles";
 
 .main-container {
   width: 100%;
@@ -96,7 +96,7 @@
 
   .about-layout {
     width: 1154px;
-    height: 100vh;
+    height: 110vh;
     display: flex;
     flex-direction: column;
     z-index: 1;
@@ -133,7 +133,7 @@
 
   .work-layout {
     width: 1154px;
-    height: 80vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     z-index: 1;
@@ -173,7 +173,7 @@
 
   .question-layout {
     width: 1154px;
-    height: 80vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -223,7 +223,7 @@
 
   .table-layout {
     width: 1154px;
-    height: 70vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
